@@ -2,11 +2,12 @@ var path = require('path');
 
 module.exports = {
   entry: [
-    './src/main'
+    './src/Electron/main',
+    './src/App/app',
   ],
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'main.js',
+    filename: '[name].bundle.js',
   },
   target: 'electron',
   resolve: {
@@ -44,5 +45,9 @@ module.exports = {
         exclude: /node_modules/,
       },
     ],
+  },
+  devServer: {
+    hot: true,
+    inline: true,
   },
 }

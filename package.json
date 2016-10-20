@@ -6,7 +6,7 @@
   "scripts": {
     "start": "yarn run dev-build && yarn run dev-run",
     "dev-build": "webpack --display-error-details",
-    "dev-run": "cd dist && electron main.js"
+    "dev-run": "cd dist && electron main.bundle.js"
   },
   "repository": {
     "url": "https://github.com/garden-stream/garden-electron.git",
